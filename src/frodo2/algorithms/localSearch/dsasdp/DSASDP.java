@@ -24,7 +24,6 @@ import frodo2.solutionSpaces.DCOPProblemInterface;
 import frodo2.solutionSpaces.UtilitySolutionSpace;
 
 /**
- * 
  * This class implements the DSA Slope Dependent Probability (DSA-SDP) as described in
  * "Explorative anytime local search for distributed constraint optimization" by Zivan et al, 2014.
  * 
