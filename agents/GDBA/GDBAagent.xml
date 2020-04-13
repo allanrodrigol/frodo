@@ -1,0 +1,58 @@
+<agentDescription className = "frodo2.algorithms.SingleQueueAgent" measureTime = "true" measureMsgs = "true" >
+	  
+	<mailman mailmanClass = "frodo2.communication.mailer.CentralMailer"/>
+	
+	<parser parserClass = "frodo2.algorithms.XCSPparser"
+		displayGraph = "false" 
+		publicAgents = "true" 
+		domClass = "frodo2.solutionSpaces.AddableInteger" 
+		utilClass = "frodo2.solutionSpaces.AddableInteger"
+		DOTrenderer = ""
+		countNCCCs = "true" />
+ 
+	<modules>  
+		<module className = "frodo2.algorithms.varOrdering.dfs.DFSgenerationParallel" 
+				reportStats = "true"
+				DOTrenderer = "">
+			<rootElectionHeuristic className = "frodo2.algorithms.heuristics.ScoringHeuristicWithTiebreaker" >
+				<heuristic1 className = "frodo2.algorithms.heuristics.MostConnectedHeuristic" />
+				<heuristic2 className = "frodo2.algorithms.heuristics.ScoringHeuristicWithTiebreaker" >
+					<heuristic1 className = "frodo2.algorithms.heuristics.SmallestDomainHeuristic" />
+					<heuristic2 className = "frodo2.algorithms.heuristics.VarNameHeuristic" />
+				</heuristic2>
+			</rootElectionHeuristic>
+			
+			<dfsGeneration className = "frodo2.algorithms.varOrdering.dfs.DFSgeneration" >
+				<dfsHeuristic className = "frodo2.algorithms.varOrdering.dfs.DFSgeneration$ScoreBroadcastingHeuristic" >
+					<scoringHeuristic className = "frodo2.algorithms.heuristics.ScoringHeuristicWithTiebreaker" >
+						<heuristic1 className = "frodo2.algorithms.heuristics.MostConnectedHeuristic" />
+						<heuristic2 className = "frodo2.algorithms.heuristics.SmallestDomainHeuristic" />
+					</scoringHeuristic>
+				</dfsHeuristic>
+			
+				<messages>
+					<message myFieldName = "START_MSG_TYPE" 
+							 targetFieldName = "START_AGENT" 
+							 targetClass = "frodo2.algorithms.AgentInterface" />
+					<message myFieldName = "ROOT_VAR_MSG_TYPE" 
+							 targetFieldName = "OUTPUT_MSG_TYPE" 
+							 targetClass = "frodo2.algorithms.varOrdering.election.LeaderElectionMaxID" />
+ 					<message myFieldName = "FINISH_MSG_TYPE" 
+							 targetFieldName = "AGENT_FINISHED" 
+							 targetClass = "frodo2.algorithms.AgentInterface" />
+				</messages>
+			</dfsGeneration>
+			
+			<messages>
+				<message myFieldName = "START_MSG_TYPE" 
+						 targetFieldName = "DONE" 
+						 targetClass = "frodo2.algorithms.reformulation.ProblemRescaler" />
+			</messages>
+		</module>
+		
+		<module className = "frodo2.algorithms.localSearch.gdba.GDBA"
+			reportStats = "true"
+			DOTrenderer = "">
+		</module>
+	</modules>
+</agentDescription>

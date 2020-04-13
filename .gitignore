@@ -1,0 +1,28 @@
+### Java ###
+# Compiled class file
+target/
+bin/
+*.class
+
+# Log file
+*.log
+
+# BlueJ files
+*.ctxt
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.pydevproject
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# System Files
+.DS_Store
+Thumbs.db

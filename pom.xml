@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>frodo2</groupId>
+  <artifactId>frodo</artifactId>
+  <version>2.0-SNAPSHOT</version>
+
+  <name>frodo</name>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+
+    <src.dir>src</src.dir>
+    <bin.dir>bin</bin.dir>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.11</version>
+    </dependency>
+
+    <dependency>
+        <groupId>org.hamcrest</groupId>
+        <artifactId>hamcrest-core</artifactId>
+        <version>1.3</version>
+        <scope>test</scope>
+    </dependency>
+
+    <dependency>
+        <groupId>org.jacop</groupId>
+        <artifactId>jacop</artifactId>
+        <version>4.4.0</version>
+    </dependency>
+
+    <dependency>
+        <groupId>jaxen</groupId>
+        <artifactId>jaxen</artifactId>
+        <version>1.1.6</version>
+    </dependency>
+
+    <dependency>
+        <groupId>org.jdom</groupId>
+        <artifactId>jdom2</artifactId>
+        <version>2.0.5</version>
+    </dependency>
+
+    <dependency>
+        <groupId>xerces</groupId>
+        <artifactId>xercesImpl</artifactId>
+        <version>2.11.0</version>
+    </dependency>
+
+    <dependency>
+        <groupId>xml-apis</groupId>
+        <artifactId>xml-apis</artifactId>
+        <version>2.0.2</version>
+    </dependency>
+
+    <dependency>
+        <groupId>com.google.guava</groupId>
+        <artifactId>guava</artifactId>
+        <version>19.0</version>
+    </dependency>
+
+    <dependency>
+        <groupId>net.sf.jung</groupId>
+        <artifactId>jung-algorithms</artifactId>
+        <version>2.1.1</version>
+    </dependency>
+
+    <dependency>
+        <groupId>net.sf.jung</groupId>
+        <artifactId>jung-api</artifactId>
+        <version>2.1.1</version>
+    </dependency>
+
+    <dependency>
+        <groupId>net.sf.jung</groupId>
+        <artifactId>jung-graph-impl</artifactId>
+        <version>2.1.1</version>
+    </dependency>
+
+    <dependency>
+        <groupId>net.sf.jung</groupId>
+        <artifactId>jung-visualization</artifactId>
+        <version>2.1.1</version>
+    </dependency>
+
+    <dependency>
+        <groupId>com.opsresearch.orobjects</groupId>
+        <artifactId>or-objects</artifactId>
+        <version>3.0.3</version>
+        <scope>system</scope>
+        <systemPath>${project.basedir}/lib/or-objects-3.0.3.jar</systemPath>
+    </dependency>
+
+    <dependency>
+        <groupId>com.orllc.orobjects</groupId>
+        <artifactId>library</artifactId>
+        <version>2.0.1</version>
+        <scope>system</scope>
+        <systemPath>${project.basedir}/lib/library-2.0.1.jar</systemPath>
+    </dependency>
+
+  </dependencies>
+
+  <build>
+    <sourceDirectory>${src.dir}</sourceDirectory>
+    <outputDirectory>${bin.dir}</outputDirectory>
+  </build>
+</project>
