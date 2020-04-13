@@ -24,8 +24,6 @@ import frodo2.solutionSpaces.DCOPProblemInterface;
 import frodo2.solutionSpaces.UtilitySolutionSpace;
 
 /**
- * @author allan
- * 
  * This class implements the Generalized Distributed Breakout Algorithm as described in
  * "Distributed breakout: Beyond satisfaction" by Okamoto et al, 2016. This algorithm is 
  * a generalization of Distributed Breakout Algorithm (DBA), a popular incomplete algorithm
