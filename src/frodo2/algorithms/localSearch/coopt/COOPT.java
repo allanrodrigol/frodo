@@ -25,7 +25,6 @@ import frodo2.solutionSpaces.DCOPProblemInterface;
 import frodo2.solutionSpaces.UtilitySolutionSpace;
 
 /**
- * 
  * This class implements the Coupled Oscillator OPTimization (COOPT) as described in
  * "COOPT: Using Collective Behavior of Coupled Oscillators for Solving DCOP" by 
  * Leite and Enembreck, 2019. This algorithm introduces concepts of synchronization 
