@@ -1,6 +1,6 @@
 # FRODO - Open-Source Framework for DCOP
 
-This project is a fork from [FRODO 2](https://sourceforge.net/projects/frodo2) project, a popular Java-based platform for solving distributed constraint optimization problem (DCOP) [1].
+This project is a fork from [FRODO 2](https://sourceforge.net/projects/frodo2) project [1], a popular Java-based platform for solving distributed constraint optimization problem (DCOP).
 
 ## Distributed Constraint Optimization Problem
 
@@ -26,7 +26,7 @@ This project was converted to an [Apache Maven](https://maven.apache.org/) proje
 * Converting the original project to a Maven project.
 * Implementing the anytime local search ALS_DCOP [3] framework.
 * Adding three new local search algorithms: COOPT [2], DSA-SDP [3] and GDBA [4].
-* Adding a distributed breath-first search (BSF) generation.
+* Adding a distributed breath-first search (BFS) generation.
 
 ## TODO
 
