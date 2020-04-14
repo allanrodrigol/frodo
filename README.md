@@ -21,7 +21,7 @@ In recent years, there has been increasing interest in developing new DCOP algor
 
 This project was converted to an [Apache Maven](https://maven.apache.org/) project and requires JDK 8 or higher. Run `maven clean install` to build the project. The compiled files will be stored in the `target/` directory.
 
-## Major changes
+## Changes
 
 * Converting the original project to a Maven project.
 * Implementing the anytime local search ALS_DCOP [3] framework.
